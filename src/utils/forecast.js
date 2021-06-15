@@ -10,7 +10,7 @@ const forecast = (lat, long, cb) => {
         } else if (body.error) {
             cb('invalid lat and long', undefined)
         } else {
-            cb(undefined, body.current.weather_descriptions[0]+ " it's currently " + body.current.temperature)
+            cb(undefined, body.current.weather_descriptions[0]+ " it's currently " + body.current.temperature + "The Humdity is " + body.current.humidity)
         }
     })
 
